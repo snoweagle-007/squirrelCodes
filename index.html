@@ -4,7 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Video Platform</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "nav main";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 60px 1fr;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #ff0000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        aside {
+            grid-area: nav;
+            background-color: #f0f0f0;
+            padding: 15px;
+        }
+
+        main {
+            grid-area: main;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 8px;
+            margin-bottom: 10px;
+            background-color: #ddd;
+            cursor: pointer;
+        }
+
+        .video-placeholder {
+            background-color: #aaa;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,7 +77,7 @@
         <section class="video">
             <h2>Video Title</h2>
             <!-- Placeholder for video content -->
-            <div class="video-placeholder">Video</div>
+            <div class="video-placeholder">Video Placeholder</div>
             <p>Description of the video...</p>
         </section>
         <!-- Add more videos as needed -->
